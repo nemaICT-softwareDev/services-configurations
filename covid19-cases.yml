@@ -1,0 +1,6 @@
+datasource:
+  endpoint: https://disease.sh/v3/covid-19/historical/ 
+  # in minutes 
+  ttl: 10 
+  # default past data interval in days
+  defaultInterval: 7
