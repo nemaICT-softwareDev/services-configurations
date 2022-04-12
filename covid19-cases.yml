@@ -3,5 +3,5 @@ datasource:
 spring:
   data:
     mongodb:
-      uri:
-      database: ${MONGO_DB:covid19-cases
+      uri: {MONGO_URI}
+      database: ${MONGO_DB:covid19-cases}
