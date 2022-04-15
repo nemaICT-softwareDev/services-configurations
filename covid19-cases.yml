@@ -3,7 +3,7 @@ datasource:
 spring:
   data:
     mongodb:
-      uri: {MONGO_URI:mongodb+srv://root:root2022@foodybox.3av01.mongodb.net}
+      uri: ${MONGO_URI:mongodb+srv://root:root2022@foodybox.3av01.mongodb.net}
       database: ${MONGO_DB:covid19-cases}
 
 # Eureka Configuration
