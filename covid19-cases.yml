@@ -3,5 +3,18 @@ datasource:
 spring:
   data:
     mongodb:
-      uri: {MONGO_URI}
+      uri: {MONGO_URI:mongodb+srv://root:root2022@foodybox.3av01.mongodb.net}
       database: ${MONGO_DB:covid19-cases}
+
+  config:
+    import:
+    - optional:configserver:${CONFIG_SERVER_URL:https://nema-config-service.herokuapp.com/}
+  cloud:
+    config:
+      label: ${GIT_BRANCH:develop}
+# Eureka Configuration 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER:https://nema-discovery-service.herokuapp.com/eureka/} 
+
