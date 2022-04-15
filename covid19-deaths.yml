@@ -1,0 +1,14 @@
+datasource:
+  endpoint: https://disease.sh/v3/covid-19/historical
+spring:
+  data:
+    mongodb:
+      uri: ${MONGO_URI:mongodb+srv://root:root2022@foodybox.3av01.mongodb.net}
+      database: ${MONGO_DB:covid19-cases}
+
+# Eureka Configuration
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER:https://nema-discovery-service.herokuapp.com/eureka/} 
+
