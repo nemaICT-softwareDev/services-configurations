@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: covid19-cases
+        uri: lb://covid19-cases
+        predicates:
+        - Path=/covid19/cases/**
+      - id: covid19-deaths
+        uri: lb://covid19-deaths
+        predicates:
+        - Path=/covid19/deaths/**
+      - id: covid19-vaccinations
+        uri: lb://covid19-vaccinations
+        predicates:
+        - Path=/covid19/vaccinations/**  
+          
+# Eureka Configuration 
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: ${EUREKA_SERVER:https://nema-discovery-service.herokuapp.com/eureka/} 
