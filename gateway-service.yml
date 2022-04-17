@@ -20,3 +20,5 @@ eureka:
   client:
     serviceUrl:
       defaultZone: ${EUREKA_SERVER:https://nema-discovery-service.herokuapp.com/eureka/} 
+      non-secure-port: 80
+      secure-port: 443
