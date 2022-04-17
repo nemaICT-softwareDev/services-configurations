@@ -25,3 +25,4 @@ eureka:
     instance:
       #prefer-ip-address: true
       hostname: https://nema-gateway-service.herokuapp.com
+      instance-id: https://nema-gateway-service.herokuapp.com
