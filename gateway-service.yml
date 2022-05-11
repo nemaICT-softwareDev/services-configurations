@@ -1,6 +1,12 @@
 spring:
   cloud:
     gateway:
+      globalcors:
+        corsConfigurations: 
+          '[/**]':
+            allowedOrigins : "*"
+            allowedMethods:
+            - GET"
       routes:
       - id: covid19-cases
         uri: lb://covid19-cases
