@@ -4,9 +4,9 @@ spring:
       globalcors:
         corsConfigurations: 
           '[/**]':
-            allowedOrigins: "http://localhost:4200"
-            allowedMethods:
-            - GET"
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
       routes:
       - id: covid19-cases
         uri: lb://covid19-cases
